@@ -4,7 +4,6 @@ class practica.Practica {
     - arr: int[]
     - delay: int
     + Practica()
-    - generateUniqueRandomArray(size: int[]): int[]
     - selectionSort(arr: int[]): void
     - binarySearch(arr: int[], target: int): void
     - updateValue(index: int, newValue: int): void
