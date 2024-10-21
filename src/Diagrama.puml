@@ -13,9 +13,16 @@ class practica.Practica {
     - sleep(delay: int): void
 }
 
+class practica.Arreglo {
+    + static buscarSequencial(int, int[]): int
+    + static llenarVector(int, int[]): void
+    + static mostrar(int, int[]): String
+}
+
 class practica.Main {
     + main(String[]) : void
 }
+Practica --> Arreglo : uses
 Practica --> java.lang.ArrayList : uses
 Practica --> java.util.Random : uses
 Practica --> java.Integer.Integer : uses
