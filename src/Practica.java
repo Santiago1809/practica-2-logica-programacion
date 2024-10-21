@@ -14,7 +14,8 @@ public class Practica extends JFrame {
 
     public Practica() {
         // Inicializar el array
-        arr = generateUniqueRandomArray(50);
+        arr = new int[50];
+        Arreglo.llenarVector(50, arr);
 
         // Configurar la ventana
         setTitle("Visualizador de Ordenamiento y Búsqueda");
@@ -211,12 +212,7 @@ public class Practica extends JFrame {
     }
 
     private boolean valueExists(int value) {
-        for (int num : arr) {
-            if (num == value) {
-                return true;
-            }
-        }
-        return false;
+        return Arreglo.buscarSecuencial(value, arr) != -1;
     }
 
     private void deleteValue(int value) {
