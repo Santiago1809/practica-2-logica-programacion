@@ -2,8 +2,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.Random;
 
 public class Practica extends JFrame {
     private int[] arr; // Usamos arr como el único array
@@ -114,21 +112,6 @@ public class Practica extends JFrame {
 
         add(panel, BorderLayout.CENTER);
         add(buttonPanel, BorderLayout.SOUTH);
-    }
-
-    private int[] generateUniqueRandomArray(int size) {
-        Random rand = new Random();
-        ArrayList<Integer> uniqueNumbers = new ArrayList<>();
-
-        while (uniqueNumbers.size() < size) {
-            int num = rand.nextInt(100); // Números aleatorios entre 0 y 99
-            if (!uniqueNumbers.contains(num)) { // Verificar si ya existe
-                uniqueNumbers.add(num); // Solo agregar si es único
-            }
-        }
-
-        // Convertir la lista a un array
-        return uniqueNumbers.stream().mapToInt(Integer::intValue).toArray();
     }
 
     private void drawArray(Graphics g) {
